@@ -11,7 +11,7 @@ Production-ready React Three Fiber components you copy into your project. Not a 
 [![npm version](https://img.shields.io/npm/v/facet3d?color=a3e635&label=npm)](https://www.npmjs.com/package/facet3d)
 [![components](https://img.shields.io/badge/components-30-a3e635)](https://github.com/elberacasa/facet/tree/main/registry)
 [![license](https://img.shields.io/badge/license-MIT-a3e635)](https://github.com/elberacasa/facet/blob/main/LICENSE)
-[![X](https://img.shields.io/badge/follow-%40facet3d-a3e635)](https://x.com/facet3d)
+[![X](https://img.shields.io/badge/follow-%40facet__3d-a3e635)](https://x.com/facet_3d)
 
 [**npm**](https://www.npmjs.com/package/facet3d) · [**Registry**](https://github.com/elberacasa/facet/tree/main/registry) · [**llms.txt**](https://github.com/elberacasa/facet/blob/main/apps/www/app/llms.txt/route.ts) · [**Issues**](https://github.com/elberacasa/facet/issues)
 
