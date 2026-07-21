@@ -1,0 +1,1551 @@
+{
+  "$schema": "https://facet.dev/schema/registry.json",
+  "components": [
+    {
+      "name": "hero-blob",
+      "title": "Hero Blob",
+      "description": "Morphing distortion sphere: the classic 3D hero centerpiece.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/hero-blob.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 10,
+          "step": 0.1,
+          "default": 2
+        },
+        {
+          "name": "distort",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.4
+        },
+        {
+          "name": "radius",
+          "type": "number",
+          "min": 0.5,
+          "max": 3,
+          "step": 0.1,
+          "default": 1.5
+        },
+        {
+          "name": "wireframe",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "particle-field",
+      "title": "Particle Field",
+      "description": "Interactive particle cloud that reacts to the cursor.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/particle-field.tsx",
+      "props": [
+        {
+          "name": "count",
+          "type": "number",
+          "min": 100,
+          "max": 10000,
+          "step": 100,
+          "default": 3000
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "radius",
+          "type": "number",
+          "min": 1,
+          "max": 10,
+          "step": 0.5,
+          "default": 4
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "min": 0.005,
+          "max": 0.1,
+          "step": 0.005,
+          "default": 0.02
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.1
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "image-particles",
+      "title": "Image Particles",
+      "description": "Particles that assemble into any text or image, and scatter under the cursor.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/image-particles.tsx",
+      "props": [
+        {
+          "name": "text",
+          "type": "text",
+          "default": "FACET"
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "particleSize",
+          "type": "number",
+          "min": 0.01,
+          "max": 0.2,
+          "step": 0.01,
+          "default": 0.05
+        },
+        {
+          "name": "density",
+          "type": "number",
+          "min": 1,
+          "max": 8,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "name": "scatter",
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "default": 1.5
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "galaxy",
+      "title": "Galaxy",
+      "description": "Procedural spiral galaxy with tens of thousands of shader-driven stars.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/galaxy.tsx",
+      "props": [
+        {
+          "name": "count",
+          "type": "number",
+          "min": 2000,
+          "max": 50000,
+          "step": 1000,
+          "default": 20000
+        },
+        {
+          "name": "branches",
+          "type": "number",
+          "min": 2,
+          "max": 10,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "name": "spin",
+          "type": "number",
+          "min": -3,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "radius",
+          "type": "number",
+          "min": 1,
+          "max": 20,
+          "step": 0.5,
+          "default": 8
+        },
+        {
+          "name": "randomness",
+          "type": "number",
+          "min": 0,
+          "max": 2,
+          "step": 0.05,
+          "default": 0.4
+        },
+        {
+          "name": "insideColor",
+          "type": "color",
+          "default": "#ff6030"
+        },
+        {
+          "name": "outsideColor",
+          "type": "color",
+          "default": "#1b3984"
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "globe-arcs",
+      "title": "Globe Arcs",
+      "description": "Interactive dotted globe with animated connection arcs: the infra-startup staple.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/globe-arcs.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "arcColor",
+          "type": "color",
+          "default": "#f97316"
+        },
+        {
+          "name": "arcCount",
+          "type": "number",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 2,
+          "step": 0.05,
+          "default": 0.3
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "aurora",
+      "title": "Aurora",
+      "description": "Animated aurora gradient shader: the landing-page background everyone wants.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/aurora.tsx",
+      "props": [
+        {
+          "name": "colorA",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "colorB",
+          "type": "color",
+          "default": "#22d3ee"
+        },
+        {
+          "name": "colorC",
+          "type": "color",
+          "default": "#f97316"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.05,
+          "default": 0.6
+        },
+        {
+          "name": "complexity",
+          "type": "number",
+          "min": 1,
+          "max": 8,
+          "step": 1,
+          "default": 4
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "ripple-plane",
+      "title": "Ripple Plane",
+      "description": "Touch-responsive water surface. Move your cursor and watch it ripple.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/ripple-plane.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#38bdf8"
+        },
+        {
+          "name": "waveHeight",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.35
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.05,
+          "default": 1
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "node-network",
+      "title": "Node Network",
+      "description": "3D plexus network of drifting, connected nodes, built for AI landing pages.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/node-network.tsx",
+      "props": [
+        {
+          "name": "nodeCount",
+          "type": "number",
+          "min": 10,
+          "max": 300,
+          "step": 10,
+          "default": 120
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "maxDistance",
+          "type": "number",
+          "min": 0.5,
+          "max": 5,
+          "step": 0.1,
+          "default": 2
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 2,
+          "step": 0.05,
+          "default": 0.4
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "cursor-trail",
+      "title": "Cursor Trail",
+      "description": "A fluid ribbon of light that follows the cursor.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/cursor-trail.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#22d3ee"
+        },
+        {
+          "name": "length",
+          "type": "number",
+          "min": 10,
+          "max": 200,
+          "step": 5,
+          "default": 60
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "min": 1,
+          "max": 12,
+          "step": 0.5,
+          "default": 4
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "audio-visualizer",
+      "title": "Audio Visualizer",
+      "description": "Audio-reactive frequency rings: microphone or built-in simulation.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/audio-visualizer.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "bars",
+          "type": "number",
+          "min": 16,
+          "max": 128,
+          "step": 8,
+          "default": 64
+        },
+        {
+          "name": "sensitivity",
+          "type": "number",
+          "min": 0.5,
+          "max": 5,
+          "step": 0.1,
+          "default": 2
+        },
+        {
+          "name": "mode",
+          "type": "select",
+          "options": [
+            "simulated",
+            "microphone"
+          ],
+          "default": "simulated"
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "floating-shapes",
+      "title": "Floating Shapes",
+      "description": "Drifting geometric primitives for ambient backgrounds.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/floating-shapes.tsx",
+      "props": [
+        {
+          "name": "count",
+          "type": "number",
+          "min": 1,
+          "max": 30,
+          "step": 1,
+          "default": 12
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "spread",
+          "type": "number",
+          "min": 2,
+          "max": 20,
+          "step": 1,
+          "default": 8
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "wave-grid",
+      "title": "Wave Grid",
+      "description": "Shader-driven undulating wireframe terrain.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/wave-grid.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#22d3ee"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "amplitude",
+          "type": "number",
+          "min": 0,
+          "max": 2,
+          "step": 0.05,
+          "default": 0.6
+        },
+        {
+          "name": "frequency",
+          "type": "number",
+          "min": 0.5,
+          "max": 6,
+          "step": 0.1,
+          "default": 2
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "text-3d",
+      "title": "3D Text",
+      "description": "Extruded 3D typography with environment-lit materials.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/text-3d.tsx",
+      "props": [
+        {
+          "name": "text",
+          "type": "text",
+          "default": "FACET"
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "min": 0.2,
+          "max": 3,
+          "step": 0.1,
+          "default": 0.8
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#ffffff"
+        },
+        {
+          "name": "bevelSize",
+          "type": "number",
+          "min": 0,
+          "max": 0.1,
+          "step": 0.005,
+          "default": 0.02
+        },
+        {
+          "name": "floatIntensity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 0.6
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "model-viewer",
+      "title": "Model Viewer",
+      "description": "Drop-in GLTF model viewer with staging and orbit controls.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/model-viewer.tsx",
+      "props": [
+        {
+          "name": "url",
+          "type": "text",
+          "default": "https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf"
+        },
+        {
+          "name": "autoRotate",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "autoRotateSpeed",
+          "type": "number",
+          "min": 0,
+          "max": 10,
+          "step": 0.1,
+          "default": 1.5
+        },
+        {
+          "name": "environment",
+          "type": "select",
+          "options": [
+            "city",
+            "sunset",
+            "dawn",
+            "night",
+            "warehouse",
+            "forest",
+            "apartment",
+            "studio",
+            "park",
+            "lobby"
+          ],
+          "default": "city"
+        },
+        {
+          "name": "enableZoom",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "holo-card",
+      "title": "Holo Card",
+      "description": "Holographic fresnel card with an iridescent sheen.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/holo-card.tsx",
+      "props": [
+        {
+          "name": "colorA",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "colorB",
+          "type": "color",
+          "default": "#f97316"
+        },
+        {
+          "name": "intensity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.05,
+          "default": 1.2
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "default": 1
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "scroll-camera",
+      "title": "Scroll Camera",
+      "description": "Scroll-driven camera flythrough scene.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/scroll-camera.tsx",
+      "props": [
+        {
+          "name": "pages",
+          "type": "number",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "damping",
+          "type": "number",
+          "min": 0.05,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.2
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "glass-prism",
+      "title": "Glass Prism",
+      "description": "Cinematic glass dispersion crystal with real refraction and chromatic aberration.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/glass-prism.tsx",
+      "props": [
+        {
+          "name": "shape",
+          "type": "select",
+          "options": [
+            "prism",
+            "torusknot",
+            "icosahedron"
+          ],
+          "default": "prism"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 2,
+          "step": 0.05,
+          "default": 0.4
+        },
+        {
+          "name": "ior",
+          "type": "number",
+          "min": 1,
+          "max": 2.5,
+          "step": 0.05,
+          "default": 1.5
+        },
+        {
+          "name": "chromaticAberration",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.3
+        },
+        {
+          "name": "tint",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "floatIntensity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "distortion",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.2
+        },
+        {
+          "name": "parallax",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "face-puppet",
+      "title": "Face Puppet",
+      "description": "Webcam face-tracked spirit head that mirrors your expressions, with mouse-follow fallback.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei",
+        "@mediapipe/tasks-vision"
+      ],
+      "file": "components/face-puppet.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "smoothing",
+          "type": "number",
+          "min": 0.05,
+          "max": 3,
+          "step": 0.05,
+          "default": 1
+        },
+        {
+          "name": "trackingSensitivity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "followMouse",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "showPreview",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "pupilScale",
+          "type": "number",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "floatIntensity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "god-rays",
+      "title": "God Rays",
+      "description": "Volumetric light shafts with drifting dust: cinematic background glow, zero post-processing.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/god-rays.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#fde68a"
+        },
+        {
+          "name": "intensity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "rayCount",
+          "type": "number",
+          "min": 1,
+          "max": 32,
+          "step": 1,
+          "default": 12
+        },
+        {
+          "name": "density",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.7
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "flicker",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.35
+        },
+        {
+          "name": "dust",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "portal",
+      "title": "Portal",
+      "description": "A standing portal that renders another world live, with true perspective parallax.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/portal.tsx",
+      "props": [
+        {
+          "name": "theme",
+          "type": "select",
+          "options": [
+            "galaxy",
+            "ocean"
+          ],
+          "default": "galaxy"
+        },
+        {
+          "name": "frameColor",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "glowIntensity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "swirlSpeed",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "wisps",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "float",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "default": 1
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "silk-cloth",
+      "title": "Silk Cloth",
+      "description": "Silk banner billowing in gusting wind, with smooth pointer push and drag.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/silk-cloth.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "windStrength",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "gustiness",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "segments",
+          "type": "number",
+          "min": 8,
+          "max": 64,
+          "step": 4,
+          "default": 36
+        },
+        {
+          "name": "pointerRadius",
+          "type": "number",
+          "min": 0.1,
+          "max": 3,
+          "step": 0.1,
+          "default": 0.9
+        },
+        {
+          "name": "pointerStrength",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1
+        },
+        {
+          "name": "pinMode",
+          "type": "select",
+          "options": [
+            "top",
+            "corners"
+          ],
+          "default": "top"
+        },
+        {
+          "name": "sheen",
+          "type": "number",
+          "min": 0,
+          "max": 2,
+          "step": 0.1,
+          "default": 1
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "lightning-arcs",
+      "title": "Lightning Arcs",
+      "description": "Branching electric arcs with a white-hot core, strike flicker, and pointer chasing.",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/lightning-arcs.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "branches",
+          "type": "number",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "name": "strikeRate",
+          "type": "number",
+          "min": 0.1,
+          "max": 5,
+          "step": 0.1,
+          "default": 1.5
+        },
+        {
+          "name": "thickness",
+          "type": "number",
+          "min": 0.01,
+          "max": 0.2,
+          "step": 0.01,
+          "default": 0.04
+        },
+        {
+          "name": "flicker",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.7
+        },
+        {
+          "name": "followPointer",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "glowIntensity",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "default": 1.6
+        }
+      ],
+      "category": "Visuals"
+    },
+    {
+      "name": "character-controller",
+      "title": "Character Controller",
+      "description": "Third-person character controller: WASD movement, jumping, and a collision-aware camera.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei",
+        "@react-three/rapier"
+      ],
+      "file": "components/character-controller.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 1,
+          "max": 20,
+          "step": 0.5,
+          "default": 6
+        },
+        {
+          "name": "jumpForce",
+          "type": "number",
+          "min": 1,
+          "max": 20,
+          "step": 0.5,
+          "default": 8
+        },
+        {
+          "name": "cameraDistance",
+          "type": "number",
+          "min": 2,
+          "max": 12,
+          "step": 0.5,
+          "default": 6
+        }
+      ]
+    },
+    {
+      "name": "procedural-terrain",
+      "title": "Procedural Terrain",
+      "description": "Seeded noise terrain with elevation biomes, from sand to snow.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/procedural-terrain.tsx",
+      "props": [
+        {
+          "name": "seed",
+          "type": "number",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "default": 42
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "default": 40
+        },
+        {
+          "name": "maxHeight",
+          "type": "number",
+          "min": 1,
+          "max": 20,
+          "step": 0.5,
+          "default": 6
+        },
+        {
+          "name": "roughness",
+          "type": "number",
+          "min": 0.1,
+          "max": 2,
+          "step": 0.05,
+          "default": 0.8
+        },
+        {
+          "name": "wireframe",
+          "type": "boolean",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "ocean",
+      "title": "Ocean",
+      "description": "Gerstner-wave water with fresnel, crest foam, and sun glint.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/ocean.tsx",
+      "props": [
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#075985"
+        },
+        {
+          "name": "waveHeight",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.05,
+          "default": 0.8
+        },
+        {
+          "name": "choppiness",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.05,
+          "default": 1
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.05,
+          "default": 1
+        }
+      ]
+    },
+    {
+      "name": "vfx-burst",
+      "title": "VFX Burst",
+      "description": "GPU particle bursts with game-ready presets: explosion, fire, smoke, magic.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/vfx-burst.tsx",
+      "props": [
+        {
+          "name": "preset",
+          "type": "select",
+          "options": [
+            "explosion",
+            "fire",
+            "smoke",
+            "magic"
+          ],
+          "default": "explosion"
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#f97316"
+        },
+        {
+          "name": "count",
+          "type": "number",
+          "min": 100,
+          "max": 3000,
+          "step": 100,
+          "default": 800
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "min": 0.01,
+          "max": 0.3,
+          "step": 0.01,
+          "default": 0.08
+        },
+        {
+          "name": "auto",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "day-night-sky",
+      "title": "Day/Night Sky",
+      "description": "Procedural sky dome with a full sun cycle, stars, and drifting clouds.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/day-night-sky.tsx",
+      "props": [
+        {
+          "name": "timeOfDay",
+          "type": "number",
+          "min": 0,
+          "max": 24,
+          "step": 0.1,
+          "default": 10
+        },
+        {
+          "name": "speed",
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "step": 0.05,
+          "default": 0.5
+        },
+        {
+          "name": "cloudCover",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.4
+        }
+      ]
+    },
+    {
+      "name": "grass-field",
+      "title": "Grass Field",
+      "description": "Tens of thousands of instanced grass blades swaying in the wind.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/grass-field.tsx",
+      "props": [
+        {
+          "name": "count",
+          "type": "number",
+          "min": 5000,
+          "max": 100000,
+          "step": 5000,
+          "default": 30000
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "default": "#65a30d"
+        },
+        {
+          "name": "windStrength",
+          "type": "number",
+          "min": 0,
+          "max": 3,
+          "step": 0.05,
+          "default": 1
+        },
+        {
+          "name": "windSpeed",
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "step": 0.1,
+          "default": 1.5
+        },
+        {
+          "name": "area",
+          "type": "number",
+          "min": 5,
+          "max": 50,
+          "step": 1,
+          "default": 20
+        }
+      ]
+    },
+    {
+      "name": "avatar-maker",
+      "title": "Avatar Maker",
+      "description": "Design a stylized 3D character with expressions and export it as a .glb for your game.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "file": "components/avatar-maker.tsx",
+      "props": [
+        {
+          "name": "skinColor",
+          "type": "color",
+          "default": "#f2c89b"
+        },
+        {
+          "name": "hairColor",
+          "type": "color",
+          "default": "#3f3f46"
+        },
+        {
+          "name": "hairStyle",
+          "type": "select",
+          "options": [
+            "bowl",
+            "buzz",
+            "spiky",
+            "ponytail",
+            "messy"
+          ],
+          "default": "bowl"
+        },
+        {
+          "name": "shirtColor",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "pantsColor",
+          "type": "color",
+          "default": "#262626"
+        },
+        {
+          "name": "accessory",
+          "type": "select",
+          "options": [
+            "none",
+            "glasses",
+            "cap"
+          ],
+          "default": "none"
+        },
+        {
+          "name": "expression",
+          "type": "select",
+          "options": [
+            "happy",
+            "neutral",
+            "surprised",
+            "sleepy"
+          ],
+          "default": "happy"
+        },
+        {
+          "name": "headSize",
+          "type": "number",
+          "min": 0.8,
+          "max": 1.4,
+          "step": 0.05,
+          "default": 1.1
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "min": 0.8,
+          "max": 1.3,
+          "step": 0.05,
+          "default": 1
+        },
+        {
+          "name": "animate",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "drift-car",
+      "title": "Drift Car",
+      "description": "Arcade drift car with raycast suspension, handbrake slides, smoke, and skid marks.",
+      "category": "Game",
+      "dependencies": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei",
+        "@react-three/rapier"
+      ],
+      "file": "components/drift-car.tsx",
+      "props": [
+        {
+          "name": "carColor",
+          "type": "color",
+          "default": "#a3e635"
+        },
+        {
+          "name": "acceleration",
+          "type": "number",
+          "min": 5,
+          "max": 40,
+          "step": 1,
+          "default": 18
+        },
+        {
+          "name": "topSpeed",
+          "type": "number",
+          "min": 5,
+          "max": 50,
+          "step": 1,
+          "default": 26
+        },
+        {
+          "name": "driftFactor",
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "default": 0.6
+        },
+        {
+          "name": "cameraLag",
+          "type": "number",
+          "min": 1,
+          "max": 20,
+          "step": 0.5,
+          "default": 6
+        },
+        {
+          "name": "fovKick",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "smoke",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "skidmarks",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    }
+  ]
+}

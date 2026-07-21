@@ -1,0 +1,15 @@
+{
+  "name": "facet",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Copy-paste 3D components for React.",
+  "workspaces": [
+    "apps/www",
+    "packages/cli"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace apps/www",
+    "build": "npm run build --workspace apps/www",
+    "test": "npm run test --workspace packages/cli"
+  }
+}

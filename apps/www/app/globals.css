@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Global horizontal overflow guard. `clip` keeps position: sticky working;
+   `hidden` is the fallback for older Safari. */
+html,
+body {
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+body {
+  @apply bg-neutral-950 text-neutral-100 antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+::selection {
+  @apply bg-lime-400 text-neutral-950;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply tracking-tight;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+/* Focus fallback — components layer Tailwind rings on top of this. */
+:focus-visible {
+  outline: 2px solid theme('colors.lime.400');
+  outline-offset: 2px;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+[role='button'] {
+  touch-action: manipulation;
+}
+
+/* Skip-link / anchor target offset below the mobile bar. */
+#content {
+  scroll-margin-top: 4rem;
+}
+
+/* Safe-area padding for the mobile top bar. */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Reusable entrance keyframes — transform/opacity only. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.neutral.800') transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-800;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-700;
+}

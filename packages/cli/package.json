@@ -1,0 +1,26 @@
+{
+  "name": "facet3d",
+  "version": "0.1.0",
+  "description": "CLI for adding Facet 3D components to your project.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elberacasa/facet.git"
+  },
+  "homepage": "https://github.com/elberacasa/facet",
+  "bugs": "https://github.com/elberacasa/facet/issues",
+  "type": "module",
+  "bin": {
+    "facet3d": "./bin/facet3d.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
