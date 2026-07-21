@@ -10,7 +10,7 @@
   "bugs": "https://github.com/elberacasa/facet/issues",
   "type": "module",
   "bin": {
-    "facet3d": "./bin/facet3d.js"
+    "facet3d": "bin/facet3d.js"
   },
   "scripts": {
     "test": "node --test"
