@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1500px; height: 500px; overflow: hidden; }
+  body {
+    background: #0a0a0a;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .stage {
+    position: relative;
+    width: 1500px;
+    height: 500px;
+  }
+  /* subtle lime glow behind the brand block */
+  .glow {
+    position: absolute;
+    left: -100px;
+    top: -150px;
+    width: 900px;
+    height: 800px;
+    background: radial-gradient(circle at 40% 50%, rgba(163, 230, 53, 0.08) 0%, rgba(163, 230, 53, 0.03) 40%, rgba(163, 230, 53, 0) 65%);
+  }
+  /* background wireframe geometry, right side */
+  .wires {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 700px;
+    height: 500px;
+    opacity: 0.10;
+  }
+  .brand {
+    position: absolute;
+    left: 90px;
+    top: 0;
+    height: 500px;
+    display: flex;
+    align-items: center;
+  }
+  .mark { flex: none; }
+  .text { margin-left: 42px; }
+  .wordmark {
+    font-size: 88px;
+    font-weight: 700;
+    letter-spacing: -3.5px;
+    color: #f5f5f5;
+    line-height: 1;
+  }
+  .tagline {
+    margin-top: 18px;
+    font-size: 27px;
+    font-weight: 400;
+    color: #a3a3a3;
+    letter-spacing: -0.3px;
+  }
+  .pill {
+    margin-top: 34px;
+    display: inline-flex;
+    align-items: center;
+    background: #141414;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-family: ui-monospace, "SF Mono", Menlo, Monaco, monospace;
+    font-size: 23px;
+    color: #e5e5e5;
+    letter-spacing: 0.2px;
+  }
+  .pill .dollar { color: #a3e635; margin-right: 14px; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="glow"></div>
+    <svg class="wires" width="700" height="500" viewBox="0 0 700 500" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+      <!-- large faceted gem wireframe, upper right -->
+      <g transform="translate(430, 30) scale(10)">
+        <path d="M12 3 L19.8 7.5 L19.8 16.5 L12 21 L4.2 16.5 L4.2 7.5 Z" />
+        <path d="M12 3 L12 12" />
+        <path d="M19.8 7.5 L12 12" />
+        <path d="M19.8 16.5 L12 12" />
+        <path d="M4.2 16.5 L12 12" />
+        <path d="M4.2 7.5 L12 12" />
+      </g>
+      <!-- smaller gem, lower right -->
+      <g transform="translate(560, 320) scale(5.5)">
+        <path d="M12 3 L19.8 7.5 L19.8 16.5 L12 21 L4.2 16.5 L4.2 7.5 Z" />
+        <path d="M12 3 L12 12" />
+        <path d="M19.8 7.5 L12 12" />
+        <path d="M19.8 16.5 L12 12" />
+        <path d="M4.2 16.5 L12 12" />
+        <path d="M4.2 7.5 L12 12" />
+      </g>
+      <!-- torus hint: nested ellipses -->
+      <g transform="translate(180, 330)">
+        <ellipse cx="0" cy="0" rx="120" ry="52" />
+        <ellipse cx="0" cy="0" rx="80" ry="34" />
+        <ellipse cx="0" cy="0" rx="40" ry="17" />
+      </g>
+    </svg>
+    <div class="brand">
+      <svg class="mark" width="180" height="180" viewBox="0 0 24 24" fill="none" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <g stroke="#a3e635" stroke-width="1.5">
+          <path d="M12 3 L19.8 7.5 L19.8 16.5 L12 21 L4.2 16.5 L4.2 7.5 Z" />
+          <path d="M12 3 L12 12" />
+          <path d="M19.8 7.5 L12 12" />
+          <path d="M19.8 16.5 L12 12" />
+          <path d="M4.2 16.5 L12 12" />
+          <path d="M4.2 7.5 L12 12" />
+        </g>
+      </svg>
+      <div class="text">
+        <div class="wordmark">Facet</div>
+        <div class="tagline">Copy-paste 3D components for React.</div>
+        <div class="pill"><span class="dollar">$</span><span>npx facet3d add avatar-maker</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

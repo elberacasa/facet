@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 400px; height: 400px; overflow: hidden; }
+  body {
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .stage {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(163, 230, 53, 0.13) 0%, rgba(163, 230, 53, 0.05) 38%, rgba(163, 230, 53, 0) 62%);
+  }
+  svg { position: relative; display: block; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="glow"></div>
+    <svg width="220" height="220" viewBox="0 0 24 24" fill="none" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <g stroke="#a3e635" stroke-width="1.8">
+        <path d="M12 3 L19.8 7.5 L19.8 16.5 L12 21 L4.2 16.5 L4.2 7.5 Z" />
+        <path d="M12 3 L12 12" />
+        <path d="M19.8 7.5 L12 12" />
+        <path d="M19.8 16.5 L12 12" />
+        <path d="M4.2 16.5 L12 12" />
+        <path d="M4.2 7.5 L12 12" />
+      </g>
+    </svg>
+  </div>
+</body>
+</html>

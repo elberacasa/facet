@@ -1,14 +1,20 @@
 <div align="center">
 
+<img src="assets/x/profile-400.png" width="96" alt="Facet logo">
+
 # Facet
 
 **Copy-paste 3D components for React.**
 
 Production-ready React Three Fiber components you copy into your project. Not a dependency. No lock-in. Own every line.
 
-[![npm](https://img.shields.io/npm/v/facet3d?color=a3e635&label=npm)](https://www.npmjs.com/package/facet3d)
+[![npm version](https://img.shields.io/npm/v/facet3d?color=a3e635&label=npm)](https://www.npmjs.com/package/facet3d)
+[![npm downloads](https://img.shields.io/npm/dm/facet3d?color=a3e635)](https://www.npmjs.com/package/facet3d)
 [![components](https://img.shields.io/badge/components-30-a3e635)](https://github.com/elberacasa/facet/tree/main/registry)
 [![license](https://img.shields.io/badge/license-MIT-a3e635)](https://github.com/elberacasa/facet/blob/main/LICENSE)
+[![X](https://img.shields.io/badge/follow-%40facet3d-a3e635)](https://x.com/facet3d)
+
+[**npm**](https://www.npmjs.com/package/facet3d) · [**Registry**](https://github.com/elberacasa/facet/tree/main/registry) · [**llms.txt**](https://github.com/elberacasa/facet/blob/main/apps/www/app/llms.txt/route.ts) · [**Issues**](https://github.com/elberacasa/facet/issues)
 
 ```bash
 npx facet3d add avatar-maker
@@ -16,7 +22,18 @@ npx facet3d add avatar-maker
 
 ![Facet](docs/showcase/hero.jpg)
 
+**If Facet is useful to you, a star goes a long way.**
+
 </div>
+
+## See it move
+
+<table>
+  <tr>
+    <td><img src="docs/showcase/image-particles.gif" alt="Image Particles"><br><b>image-particles</b> — particles assemble into any text, scatter under the cursor</td>
+    <td><img src="docs/showcase/vfx-burst.gif" alt="VFX Burst"><br><b>vfx-burst</b> — multi-layer GPU explosion with shockwave and flash light</td>
+  </tr>
+</table>
 
 ## Why Facet
 
@@ -26,6 +43,16 @@ npx facet3d add avatar-maker
 - **A playground for every prop.** Tune everything live in the docs, then copy the exact config.
 - **Game tier included.** Character controller, procedural terrain, ocean, sky, grass, VFX, and an avatar maker that exports real .glb files.
 - **Built for AI agents.** Machine-readable registry, `llms.txt`, and a CLI your agent can drive.
+
+## How it compares
+
+| | Facet | 3D npm libraries | Build it yourself |
+| --- | --- | --- | --- |
+| Own the source | ✅ every line | ❌ black box | ✅ but weeks of work |
+| Install time | ✅ one command | ✅ | ❌ |
+| No version lock-in | ✅ | ❌ breaking changes | ✅ |
+| Game-grade systems | ✅ physics, terrain, VFX | rare | ❌ hard |
+| Agent-ready docs | ✅ llms.txt + CLI | ❌ | ❌ |
 
 ## Showcase
 
@@ -123,23 +150,27 @@ export default function Hero() {
 
 Facet is designed to be consumed by coding agents (Claude Code, Cursor, Copilot):
 
-- `/llms.txt` and `/llms-full.txt` routes on the docs site describe every component, prop, and default
-- `facet3d docs <name> --source` prints agent-consumable documentation and full source for any component
+- `/llms.txt` and `/llms-full.txt` routes describe every component, prop, and default
+- `facet3d docs <name> --source` prints agent-consumable documentation and full source
 - The registry itself is machine-readable: [`registry/index.json`](registry/index.json)
 
-## Repo layout
+## Roadmap
 
-- `registry/`: the component source of truth (`index.json` + `components/*.tsx`)
-- `apps/www`: the docs / playground site (Next.js)
-- `packages/cli`: the `facet3d` CLI
+- [x] 30 components across game and visual tiers
+- [x] CLI with init / add / list / docs
+- [x] Live playground for every prop
+- [ ] Public docs deployment
+- [ ] World composer: one command, a full island scene
+- [ ] Avatar poses and rigged animation export
+- [ ] Component packs by theme (cyberpunk, minimal, nature)
 
-## Develop
+## Contributing
 
-```bash
-npm install
-npm run dev    # docs site at localhost:3000
-npm test       # CLI tests
-```
+Issues and PRs welcome. New components need: a self-contained `registry/components/<name>.tsx`, an entry in `registry/index.json` with a prop schema, and a demo page. Read a few existing components first — the conventions are strict on purpose.
+
+## Star history
+
+[![Star History Chart](https://api.star-history.com/svg?repos=elberacasa/facet&type=Date)](https://star-history.com/#elberacasa/facet&Date)
 
 ## License
 
