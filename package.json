@@ -5,7 +5,8 @@
   "description": "Copy-paste 3D components for React.",
   "workspaces": [
     "apps/www",
-    "packages/cli"
+    "packages/cli",
+    "packages/mcp"
   ],
   "scripts": {
     "dev": "npm run dev --workspace apps/www",

@@ -100,6 +100,10 @@ export async function GET() {
   lines.push('- `npx facet3d list`: list all available components')
   lines.push('- `npx facet3d docs <name>`: print usage docs for a component')
   lines.push('')
+  lines.push('## MCP server')
+  lines.push('')
+  lines.push('AI agents can also use the `@facet3d/mcp` MCP server (tools: facet_list, facet_docs, facet_source, facet_add). Config: {"mcpServers": {"facet": {"command": "npx", "args": ["-y", "@facet3d/mcp"]}}}')
+  lines.push('')
 
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },

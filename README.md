@@ -147,7 +147,24 @@ export default function Hero() {
 
 ## Made for AI agents
 
-Facet is designed to be consumed by coding agents (Claude Code, Cursor, Copilot):
+Facet is designed to be consumed by coding agents (Claude Code, Cursor, Copilot).
+
+**MCP server** (`@facet3d/mcp`): let your agent browse and install components natively. One block in your agent config:
+
+```json
+{
+  "mcpServers": {
+    "facet": {
+      "command": "npx",
+      "args": ["-y", "@facet3d/mcp"]
+    }
+  }
+}
+```
+
+Tools: `facet_list`, `facet_docs`, `facet_source`, `facet_add`.
+
+**Also:**
 
 - `/llms.txt` and `/llms-full.txt` routes describe every component, prop, and default
 - `facet3d docs <name> --source` prints agent-consumable documentation and full source
@@ -157,6 +174,7 @@ Facet is designed to be consumed by coding agents (Claude Code, Cursor, Copilot)
 
 - [x] 30 components across game and visual tiers
 - [x] CLI with init / add / list / docs
+- [x] MCP server for agent-native installs (@facet3d/mcp)
 - [x] Live playground for every prop
 - [ ] Public docs deployment
 - [ ] World composer: one command, a full island scene
