@@ -54,7 +54,7 @@ const FEATURES = [
   },
   {
     title: 'Built for AI agents',
-    body: 'llms.txt, machine-readable registry, and a CLI your agent can drive.',
+    body: 'MCP server, llms.txt, machine-readable registry, and a CLI your agent can drive.',
     icon: (
       <svg
         width="20"
@@ -269,12 +269,20 @@ export default async function HomePage() {
             </h2>
             <p className="mt-4 leading-relaxed text-neutral-400">
               Any coding agent, like Claude Code, Cursor, or Copilot, can
-              consume the Facet registry directly. The CLI reads and writes
-              plain source files, so your agent can list components, pull their
-              docs, and add them to your project without ever leaving the
+              consume the Facet registry directly. The MCP server lets agents
+              browse components, read their docs and source, and install them
+              into your project natively. The CLI does the same from the
               terminal.
             </p>
-            <div className="mt-8 flex gap-6 text-sm">
+            <div className="mt-8 flex flex-wrap gap-6 text-sm">
+              <a
+                href="https://www.npmjs.com/package/@facet3d/mcp"
+                target="_blank"
+                rel="noreferrer"
+                className={`rounded text-neutral-400 underline decoration-neutral-700 underline-offset-4 transition-colors [touch-action:manipulation] hover:text-lime-300 hover:decoration-lime-400 ${FOCUS_RING}`}
+              >
+                @facet3d/mcp
+              </a>
               <a
                 href="/llms.txt"
                 className={`rounded text-neutral-400 underline decoration-neutral-700 underline-offset-4 transition-colors [touch-action:manipulation] hover:text-lime-300 hover:decoration-lime-400 ${FOCUS_RING}`}
@@ -289,7 +297,11 @@ export default async function HomePage() {
               </a>
             </div>
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 space-y-4">
+            <CodeBlock
+              code={'{\n  "mcpServers": {\n    "facet": {\n      "command": "npx",\n      "args": ["-y", "@facet3d/mcp"]\n    }\n  }\n}'}
+              label="mcp config"
+            />
             <CodeBlock
               code={'npx facet3d docs image-particles\nnpx facet3d add image-particles'}
               label="terminal"
